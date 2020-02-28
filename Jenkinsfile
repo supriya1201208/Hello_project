@@ -12,7 +12,7 @@ pipeline {
 		steps{
 			checkout changelog: false, poll: false, 
 			scm: [$class: 'GitSCM', branches: [[name: '*/master']], 
-			doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/nevin-cleetus/hello.git']]]
+			doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/supriya1201208/Hello_project.git']]]
 		}
 	}
 		
@@ -20,7 +20,7 @@ pipeline {
 
 		steps {
 			echo 'This is a minimal pipeline.'
-			sh 'mvn clean package sonar:sonar -Dsonar.projectKey=MyHello -Dsonar.host.url=http://13.235.242.47:9000/sonar -Dsonar.login=d4b7a84c8da51ff1a211392a5e99344a9e0384e7'
+			sh 'mvn clean package sonar:sonar mvn sonar:sonar -Dsonar.projectKey=supriya_project -Dsonar.host.url=http://18.139.223.23:9000/sonar -Dsonar.login=164cd07afb237247ba16af02373c140f54b8aaf4'
 		}
 	}
     }	    
